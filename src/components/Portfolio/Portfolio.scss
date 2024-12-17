@@ -1,0 +1,16 @@
+.portfolio {
+    background: #0b1517;
+    padding-top: 150px;
+    .projects .content {
+        @media only screen and (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+    .more {
+        .more-btn {
+            display: block;
+            padding: 10px 30px;
+            margin-top: 10px;
+        }
+    }
+}

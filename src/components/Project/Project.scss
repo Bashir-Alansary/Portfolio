@@ -1,0 +1,62 @@
+.project {
+    position: relative;
+    width: 31.5%;
+    height: 265px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 35px;
+    background: #10191a;
+    box-shadow: 11px 10px 38px hsla(0, 0%, 0%, 38%);
+    @media only screen and (max-width: 600px) {
+        width: 383px;
+    }
+    &:not(:nth-child(3n)) {
+        margin-right: 2.75%;
+        @media only screen and (max-width: 600px) {
+            margin-right: 0;
+        }
+    }
+    .imgbx {
+        width: 100%;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #9909accc;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s;
+        .btns {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            transition: 0.5s;
+            a {
+                height: 45px;
+                width: 55px;
+                border-radius: 5px;
+                background: #fff;
+                font-size: 24px;
+                color: #0b1517;
+                &:first-of-type {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    &:hover .overlay {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover .overlay .btns {
+        bottom: 30px;
+    }
+}

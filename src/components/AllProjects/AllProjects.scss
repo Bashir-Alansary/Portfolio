@@ -1,0 +1,12 @@
+.all-projects {
+    padding-top: 150px;
+    background: #0b1517;
+    .content {
+        @media only screen and (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+    .filters {
+        margin: 20px auto 40px;
+    }
+}

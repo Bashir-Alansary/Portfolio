@@ -1,0 +1,46 @@
+.about {
+    background: #0b1517;
+    padding-top: 150px;
+    .content {
+        &>div {
+            width: 48%;
+            @media only screen and (max-width: 600px) {
+                width: 100%;
+            }
+        }
+        .imgbx {
+            @media only screen and (max-width: 600px) {
+                text-align: center;
+            }
+            img {
+                width: 500px;
+                @media only screen and (max-width: 600px) {
+                    width: 370px;
+                }
+            }
+        }
+
+        .btns {
+            a {
+                display: inline-block;
+                text-decoration: none;
+                font-size: 17px;
+                padding: 10px 30px;
+                &.cv {
+                    border: 1px solid #fff;
+                    transition: 0.5s;
+                    margin-left: 20px;
+                    border-radius: 5px;
+                    color: #fff;
+                    font-weight: 600;
+                    &:hover {
+                        background: #fff;
+                        color: #0b1517;
+
+                    }
+                }
+            }
+
+        }
+    }
+}

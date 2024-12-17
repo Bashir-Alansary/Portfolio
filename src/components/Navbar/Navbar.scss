@@ -1,0 +1,129 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #0b1517;
+    &.active {
+        background: #10191a;
+    }
+    @media only screen and (max-width: 600px) {
+        background: #10191a;
+    }
+    .container {
+        height: 100%;
+        .content {
+            height: 100%;
+            .band {
+                @media only screen and (max-width: 600px) {
+                    width: 100%;
+                    .toggle-btn {
+                        background: none;
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+                        &.active {
+                            .top {
+                                transform: rotate(40deg) translateX(10px);
+                                opacity: 0;
+                            }
+                            .middle {
+                                width: 35px;
+                                transform: rotate(45deg) translateX(9px);
+                            }
+                            .bottom {
+                                width: 35px;
+                                transform: rotate(-45deg) translateX(7px);
+                            }
+                        }
+                        span {
+                            display: block;
+                            height: 3px;
+                            transition: 0.5s;
+                            &.top, &.bottom {
+                                background: #fff;
+                            }
+                            &.top {
+                                width: 10px;
+                            }
+                            &.middle {
+                                width: 25px;
+                                margin: 8px 0;
+                                background: #9909ac;
+                            }
+                            &.bottom {
+                                width: 40px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .links {
+                margin: 0;
+                $linksHeight: 770px;
+                @media only screen and (max-width: 600px) {
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    background: #0b1517;
+                    height: $linksHeight;
+                    transition: 0.5s;
+                    &.active {
+                        top: $linksHeight;
+                    }
+                }
+                li {
+                    margin-left: 25px;
+                    @media only screen and (max-width: 600px) {
+                        margin-left: 0;
+                        margin-bottom: 30px;
+                        text-align: center;
+                    }
+                    &.cont {order: 5;}
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 16px;
+                        font-weight: 600;
+                        @media only screen and (max-width: 600px) {
+                            font-size: 28px;
+                        }
+                        .dot {
+                            font-size: 20px;
+                            @media only screen and (max-width: 600px) {
+                                font-size: 28px;
+                            }
+                        }
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            bottom: 0px;
+                            left: 0;
+                            background: #fff;
+                            width: 0;
+                            height: 2px;
+                            transition: 0.5s;
+                        }
+                        &:hover:before  {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+    
+            .contact-btn {
+                a {
+                    display: block;
+                    text-decoration: none;
+                    padding: 8px 30px;
+                }
+            }
+        }
+    }
+}
