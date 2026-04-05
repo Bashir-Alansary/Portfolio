@@ -18,7 +18,7 @@ const Navbar:FC = () => {
                     if (index < 3) {
                       return (
                         <li key={id} className='media-icon'>
-                          <a href={link} className='flx-c'>{icon}</a>
+                          <a href={link} target='_blank' className='flx-c'>{icon}</a>
                           <span className='name flx-c'>{name}</span>
                         </li>
                       )

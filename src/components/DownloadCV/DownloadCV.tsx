@@ -3,8 +3,8 @@ import React from 'react'
 const DownloadCV = () => {
   return (
     <a 
-    href="Bashir Alansary.pdf" 
-    download="Bashir Alansary.pdf" 
+    href="Bashir_Alansary_CV.pdf" 
+    download="Bashir_Alansary_CV.pdf" 
     className='cv specail-btn'>
         Download CV
     </a>
